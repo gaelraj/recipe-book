@@ -1,3 +1,5 @@
+'use client';
+
 interface SearchBarProps {
   onSearch: (query: string) => void;
 }

@@ -1,26 +1,27 @@
-import { useState } from 'react'
-import styles from './RecipeCard.module.css'
+'use client';
+
+import { useState } from 'react';
+import styles from './RecipeCard.module.css';
 
 interface RecipeCardProps {
-    recipe: {
-        name: string;
-        category: string;
-        duration: number;
-        image: string;
-    }
+  recipe: {
+    id: string;
+    name: string;
+    category: string;
+    duration: number;
+    image: string;
+  };
 }
 
-
-
-export default function RecipeCard({ recipe } : RecipeCardProps) {
-  const [pinned, setPinned] = useState(false)
+export default function RecipeCard({ recipe }: RecipeCardProps) {
+  const [pinned, setPinned] = useState(false);
 
   return (
     <article className={`${styles.card} ${pinned ? styles.pinned : ''}`}>
       <img
         className={styles.image}
         src={recipe.image}
-        alt=""
+        alt={recipe.name}
       />
       <div className={styles.body}>
         <h2 className={styles.name}>{recipe.name}</h2>
@@ -35,5 +36,5 @@ export default function RecipeCard({ recipe } : RecipeCardProps) {
         </button>
       </div>
     </article>
-  )
+  );
 }

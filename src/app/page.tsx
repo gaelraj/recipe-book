@@ -15,7 +15,7 @@ export default function Home() {
         </div>
       </header>
       <main className={styles.main}>
-        <InteractiveWrapper 
+        <InteractiveWrapper
           initialRecipes={recipes}
           allIngredients={allIngredients}
         />

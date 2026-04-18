@@ -10,9 +10,9 @@ interface InteractiveWrapperProps {
   allIngredients: string[];
 }
 
-export default function InteractiveWrapper({ 
-  initialRecipes, 
-  allIngredients 
+export default function InteractiveWrapper({
+  initialRecipes,
+  allIngredients
 }: InteractiveWrapperProps) {
   const [orderedRecipes, setOrderedRecipes] = useState(initialRecipes);
   const [searchQuery, setSearchQuery] = useState("");
@@ -29,11 +29,11 @@ export default function InteractiveWrapper({
       );
       if (!hasAllIngredients) return false;
     }
-    
+
     if (searchQuery !== "") {
       return recipe.name.toLowerCase().includes(searchQuery.toLowerCase());
     }
-    
+
     return true;
   });
 
@@ -58,18 +58,18 @@ export default function InteractiveWrapper({
         </button>
       </div>
 
-      <IngredientFilter 
+      <IngredientFilter
         allIngredients={allIngredients}
         selectedIngredients={selectedIngredients}
         onSelectIngredient={setSelectedIngredients}
       />
-      
+
       <SearchBar onSearch={setSearchQuery} />
-      
+
       <p style={{ margin: '10px 0', color: '#666', fontSize: '14px' }}>
         {filteredRecipes.length} recette(s) trouvée(s)
       </p>
-      
+
       <RecipeList recipes={filteredRecipes} />
     </>
   );

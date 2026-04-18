@@ -1,31 +1,31 @@
 .wrapper {
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 1.5rem 1.25rem 2.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 2.5rem;
 }
 
 .buttonWrapper {
-  margin-bottom: 20px;
-  text-align: right;
+    margin-bottom: 20px;
+    text-align: right;
 }
 
 .toggleButton {
-  font: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0.45rem 0.85rem;
-  border-radius: 8px;
-  border: 1px solid #c9c2b6;
-  background: #fff;
-  cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.45rem 0.85rem;
+    border-radius: 8px;
+    border: 1px solid #c9c2b6;
+    background: #fff;
+    cursor: pointer;
 }
 
 .toggleButton:hover {
-  background: #f6f4f1;
+    background: #f6f4f1;
 }
 
 .resultCount {
-  margin: 10px 0;
-  color: #6b645a;
-  font-size: 0.9rem;
+    margin: 10px 0;
+    color: #6b645a;
+    font-size: 0.9rem;
 }
